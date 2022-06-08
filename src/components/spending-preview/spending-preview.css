@@ -1,0 +1,32 @@
+.spending-preview {
+  padding: 10px 16px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-left: 2px solid;
+  border-bottom: 1px solid;
+}
+
+.title-preview {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.spend {
+    border-color: crimson;
+}
+
+.receive {
+  border-color: #42bb46;
+}
+
+.spend:hover {
+  box-shadow: 3px 5px 7px rgba(243, 141, 7, 0.1);
+  border-left: 5px solid crimson;
+}
+
+.receive:hover {
+  box-shadow: 3px 5px 7px rgba(243, 141, 7, 0.1);
+  border-left: 5px solid #42bb46;
+}
+  
