@@ -1,7 +1,6 @@
 import NewSpending from "../views/NewSpending";
 import SpendingsView from "../views/SpendingsView";
 
-
 const Spendings = ({ size }) => {
   return size === "small" ? (
     <div className="p-3">
