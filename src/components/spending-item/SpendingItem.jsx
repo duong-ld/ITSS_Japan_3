@@ -7,21 +7,14 @@ import { SpendingContext } from "../../contexts/SpendingContext";
 import Form from "../form/Form";
 import FunctionButton from "./FunctionButton";
 
-import "./spending-preview.css";
+import "./spending-item.css";
 
-const SpendingPreview = ({ spending, onSelect }) => {
+const SpendingItem = ({ spending }) => {
   const { dispatch } = useContext(SpendingContext);
   // "open" varible for detail form
   const [open, setOpen] = useState(false);
-  // "checked" varible for check label
-  const [checked, setChecked] = useState(false);
 
   const toggleDetail = () => setOpen(!open);
-
-  const handelCheck = () => {
-    onSelect(!checked, spending.id);
-    setChecked(!checked);
-  };
 
   const handleUpdate = (spending) => {
     setOpen(false);
@@ -34,9 +27,8 @@ const SpendingPreview = ({ spending, onSelect }) => {
   };
 
   const getSpendingStyle = (spending) => {
-    let spendingStyle = "spending-preview";
+    let spendingStyle = "spending-item";
 
-    // check priority
     if (spending.type === ESpending.SPEND) {
       spendingStyle += " spend";
     } else if (spending.type === ESpending.RECEIVE) {
@@ -58,7 +50,6 @@ const SpendingPreview = ({ spending, onSelect }) => {
         </h4>
         <FunctionButton
           spending={spending}
-          checked={checked}
           onDestroy={handleDestroy}
           toggleDetail={toggleDetail}
         />
@@ -81,4 +72,4 @@ const SpendingPreview = ({ spending, onSelect }) => {
   );
 };
 
-export default SpendingPreview;
+export default SpendingItem;

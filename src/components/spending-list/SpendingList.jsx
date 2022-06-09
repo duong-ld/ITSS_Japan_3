@@ -1,13 +1,12 @@
-import SpendingPreview from "../spending-preview/SpendingPreview";
+import SpendingItem from "../spending-item/SpendingItem";
 
-const SpendingList = ({ spendings, onSelect }) => {
+const SpendingList = ({ spendings }) => {
   return spendings.length !== 0 ? (
     <div>
       {spendings.map((spending) => (
-        <SpendingPreview
+        <SpendingItem
           key={spending.id}
           spending={spending}
-          onSelect={onSelect}
         />
       ))}
     </div>

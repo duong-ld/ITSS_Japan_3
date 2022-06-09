@@ -1,0 +1,13 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css');
+
+.panel-tabs btn-filter {
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: -1px;
+    padding: 0.5em;
+}
+
+.btn-filter {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
